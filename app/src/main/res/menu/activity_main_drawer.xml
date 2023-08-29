@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_Edit_Profile" />
+        <item
+            android:id="@+id/menu_Network"
+            android:icon="@drawable/ic_menu_camera"
+            android:checked="true"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/menu_Business"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_Business" />
+        <item
+            android:id="@+id/menu_Merchant"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_Merchant" />
+        <item
+            android:id="@+id/menu_Dating"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_Dating" />
+        <item
+            android:id="@+id/menu_Matrimony"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_Matrimony" />
+        <item
+            android:id="@+id/menu_BuySellRent"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_BuySellRent" />
+        <item
+            android:id="@+id/menu_Jobs"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_Jobs" />
+        <item
+            android:id="@+id/menu_Business2"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_Business2" />
+        <item
+            android:id="@+id/menu_Notes"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_Notes" />
+
+        <item
+            android:id="@+id/menu_Live"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_Live" />
+
+    </group>
+</menu>

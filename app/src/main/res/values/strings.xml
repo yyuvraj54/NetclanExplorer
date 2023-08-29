@@ -1,0 +1,27 @@
+<resources>
+
+    <string name="app_name">Netclan Explorer Clone</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_Edit_Profile">Edit Profile</string>
+    <string name="menu_home">My Network</string>
+    <string name="menu_Business">Switch to Business</string>
+    <string name="menu_Merchant">Switch to Merchant</string>
+    <string name="menu_Dating">Dating</string>
+    <string name="menu_Matrimony">Matrimony</string>
+    <string name="menu_BuySellRent">Buy-Sell-Rent</string>
+    <string name="menu_Jobs">Jobs</string>
+    <string name="menu_Business2">Business</string>
+    <string name="menu_Group">Netclan Group</string>
+    <string name="menu_Notes">Notes</string>
+    <string name="menu_Network">Network</string>
+    <string name="menu_Live">Live Location</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

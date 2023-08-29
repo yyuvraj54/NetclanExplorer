@@ -11,15 +11,15 @@
         android:icon="@drawable/baseline_settings"
         android:title="Network"/>
 
-    <item android:id="@+id/chat"
+    <item android:id="@+id/chat2"
         android:icon="@drawable/baseline_person"
         android:title="Chat"/>
 
-    <item android:id="@+id/contacts"
+    <item android:id="@+id/contacts4"
         android:icon="@drawable/baseline_person"
         android:title="Contacts"/>
 
-    <item android:id="@+id/group"
+    <item android:id="@+id/group2"
         android:icon="@drawable/baseline_person"
         android:title="Group"/>
 

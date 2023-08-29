@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottomnav)
         bottomNavigationView.setupWithNavController(navController)
 
-        appBarConfiguration = AppBarConfiguration(setOf( R.id.nav_home ,R.id.network ), drawerLayout)
+        appBarConfiguration = AppBarConfiguration(setOf( R.id.nav_home ,R.id.network, R.id.chat2,R.id.contacts4, R.id.group2 ), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 

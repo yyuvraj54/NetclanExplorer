@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:textAlignment="viewStart"
     tools:context=".Personal_Fragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -18,29 +19,34 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
             android:layout_margin="10dp"
+            android:gravity="center_vertical"
             android:orientation="horizontal">
 
             <EditText
                 android:id="@+id/editTextText"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:drawableStart="@drawable/baseline_person"
+                android:layout_height="33dp"
                 android:layout_weight="5"
+                android:background="@drawable/custom_progress_bg"
+                android:drawableStart="@drawable/baseline_search"
+                android:drawablePadding="2dp"
+                android:ems="10"
+                android:hint="  Search"
                 android:inputType="text"
                 android:minHeight="48dp"
-                android:hint="  Search"/>
+                android:padding="5dp"
+                tools:ignore="TouchTargetSizeCheck" />
 
             <ImageButton
                 android:id="@+id/imageButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
                 android:layout_weight="1"
-                android:minWidth="48dp"
-                android:minHeight="48dp"
-                android:src="@drawable/baseline_display"
+                android:background="@color/white"
+                android:scaleType="fitCenter"
+
+                android:src="@drawable/setting"
                 tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
         </LinearLayout>
 
@@ -52,14 +58,15 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical" >
+                android:orientation="vertical">
 
                 <RelativeLayout
-
                     android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
                     android:layout_marginHorizontal="10dp"
                     android:layout_marginVertical="10dp"
-                    android:layout_height="180dp">
+                    android:padding="5dp">
 
                     <RelativeLayout
 
@@ -71,8 +78,8 @@
                         <androidx.cardview.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="180dp"
-                            app:cardElevation="11dp"
                             app:cardCornerRadius="11dp"
+                            app:cardElevation="11dp"
                             app:cardUseCompatPadding="true">
 
                             <androidx.constraintlayout.widget.ConstraintLayout
@@ -80,68 +87,508 @@
                                 android:layout_height="match_parent">
 
                                 <Button
-                                    android:id="@+id/button"
-                                    android:layout_width="wrap_content"
-                                    android:backgroundTint="@color/white"
-                                    android:textColor="@color/black"
-                                    android:layout_height="wrap_content"
-                                    android:text="INVITE"
-                                    android:drawableStart="@drawable/baseline_settings"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
 
-                                <TextView
-                                    android:id="@+id/textView3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:backgroundTint="@color/white"
+                                    android:drawableStart="@drawable/baseline_settings"
+                                    android:text="+ INVITE"
+                                    android:textAlignment="viewStart"
+                                    android:textColor="@color/black"
+                                    android:textSize="10sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TouchTargetSizeCheck" />
+
+
+                                <LinearLayout
+
+                                    android:id="@+id/linearLayout2"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginTop="16dp"
-                                    android:layout_marginEnd="184dp"
-                                    android:text="Michael Murphy"
+                                    android:layout_marginEnd="88dp"
+                                    android:orientation="vertical"
                                     app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintTop_toTopOf="parent" />
+                                    app:layout_constraintTop_toTopOf="parent">
 
-                                <TextView
-                                    android:id="@+id/textView5"
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Michael Murphy"
+                                        android:textFontWeight="700" />
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="San Francisco, within 1Km" />
+
+                                    <ProgressBar
+
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:progress="25" />
+                                </LinearLayout>
+
+                                <LinearLayout
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_marginTop="4dp"
-                                    android:layout_marginEnd="120dp"
-                                    android:text="San Francisco, within 1Km"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-                                <TextView
-                                    android:id="@+id/textView6"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginTop="24dp"
-                                    android:text="Friendship | Coffee | Hangout"
-                                    app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintHorizontal_bias="0.254"
-                                    app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/textView5" />
-
-                                <TextView
-                                    android:id="@+id/textView7"
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:text="Hi community! I am opento new connections.."
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:orientation="vertical"
                                     app:layout_constraintBottom_toBottomOf="parent"
                                     app:layout_constraintEnd_toEndOf="parent"
-                                    app:layout_constraintHorizontal_bias="0.589"
+                                    app:layout_constraintHorizontal_bias="0.308"
                                     app:layout_constraintStart_toStartOf="parent"
-                                    app:layout_constraintTop_toBottomOf="@+id/textView6"
-                                    app:layout_constraintVertical_bias="0.2" />
+                                    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                                    app:layout_constraintVertical_bias="0.238"
+                                    tools:ignore="UnknownId">
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Friendship | Coffee | Hangout"
+                                        android:textFontWeight="700" />
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Hi community! I am opento new connections.." />
+                                </LinearLayout>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_margin="10dp"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginTop="4dp"
+                                    android:elevation="10dp"
+                                    app:cardCornerRadius="10dp"
+
+                                    app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/imageView2"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:contentDescription="Description for Accessibility"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/photo" />
+                                </androidx.cardview.widget.CardView>
+
                             </androidx.constraintlayout.widget.ConstraintLayout>
                         </androidx.cardview.widget.CardView>
 
                     </RelativeLayout>
 
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        tools:src="@drawable/photo" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:padding="5dp">
+
+                    <RelativeLayout
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="match_parent">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            app:cardCornerRadius="11dp"
+                            app:cardElevation="11dp"
+                            app:cardUseCompatPadding="true">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <Button
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:backgroundTint="@color/white"
+                                    android:drawableStart="@drawable/baseline_settings"
+                                    android:text="+ INVITE"
+                                    android:textColor="@color/black"
+                                    android:textSize="10sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TouchTargetSizeCheck" />
+
+
+                                <LinearLayout
+
+                                    android:id="@+id/linearLayout29"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginEnd="88dp"
+                                    android:orientation="vertical"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="John Doe"
+                                        android:textFontWeight="700" />
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="San Francisco, within 1Km" />
+
+                                    <ProgressBar
+
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:progress="40" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="12dp"
+                                    android:orientation="vertical"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.287"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                                    app:layout_constraintVertical_bias="0.238"
+                                    tools:ignore="UnknownId">
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Friendship | Movies | Hobbies"
+                                        android:textFontWeight="700" />
+
+                                    <TextView
+
+                                        android:layout_width="280dp"
+                                        android:layout_height="wrap_content"
+                                        android:text="Going to Berkely, would love to share a ride with someone like minded" />
+                                </LinearLayout>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_margin="10dp"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginTop="4dp"
+                                    android:elevation="10dp"
+                                    app:cardCornerRadius="10dp"
+
+                                    app:layout_constraintEnd_toStartOf="@+id/linearLayout29"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/imageView29"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:contentDescription="Description for Accessibility"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/person2" />
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:padding="5dp">
+
+                    <RelativeLayout
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="match_parent">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            app:cardCornerRadius="11dp"
+                            app:cardElevation="11dp"
+                            app:cardUseCompatPadding="true">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+
+                                <Button
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:backgroundTint="@color/white"
+                                    android:drawableStart="@drawable/baseline_settings"
+                                    android:text="+ INVITE"
+                                    android:textColor="@color/black"
+                                    android:textSize="10sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TouchTargetSizeCheck" />
+
+                                <LinearLayout
+
+                                    android:id="@+id/linearLayout27"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginEnd="88dp"
+                                    android:orientation="vertical"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Alex Johnson"
+                                        android:textFontWeight="700" />
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="San Francisco, within 1Km" />
+
+                                    <ProgressBar
+
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:progress="80" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:orientation="vertical"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.308"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                                    app:layout_constraintVertical_bias="0.238"
+                                    tools:ignore="UnknownId">
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Friendship | Coffee | Hangout"
+                                        android:textFontWeight="700" />
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Hi community! I am opento new connections.." />
+                                </LinearLayout>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_margin="10dp"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginTop="4dp"
+                                    android:elevation="10dp"
+                                    app:cardCornerRadius="10dp"
+
+                                    app:layout_constraintEnd_toStartOf="@+id/linearLayout27"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/imageView27"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:contentDescription="Description for Accessibility"
+                                        android:scaleType="fitCenter"
+                                        android:src="@drawable/person4" />
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="20dp"
+                    android:padding="5dp">
+
+                    <RelativeLayout
+
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="match_parent">
+
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"
+                            app:cardCornerRadius="11dp"
+                            app:cardElevation="11dp"
+                            app:cardUseCompatPadding="true">
+
+                            <androidx.constraintlayout.widget.ConstraintLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <Button
+
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="30dp"
+                                    android:backgroundTint="@color/white"
+                                    android:drawableStart="@drawable/baseline_settings"
+                                    android:text="+ INVITE"
+                                    android:textColor="@color/black"
+                                    android:textSize="10sp"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent"
+                                    tools:ignore="TouchTargetSizeCheck" />
+
+
+                                <LinearLayout
+
+                                    android:id="@+id/linearLayout24"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="16dp"
+                                    android:layout_marginEnd="88dp"
+                                    android:orientation="vertical"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Jennifer"
+                                        android:textFontWeight="700" />
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="San Francisco, within 1Km" />
+
+                                    <ProgressBar
+
+                                        style="?android:attr/progressBarStyleHorizontal"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:progress="32" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="16dp"
+                                    android:orientation="vertical"
+                                    app:layout_constraintBottom_toBottomOf="parent"
+                                    app:layout_constraintEnd_toEndOf="parent"
+                                    app:layout_constraintHorizontal_bias="0.308"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+                                    app:layout_constraintVertical_bias="0.238"
+                                    tools:ignore="UnknownId">
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Friendship | Coffee | Hangout"
+                                        android:textFontWeight="700" />
+
+                                    <TextView
+
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Hi community! I am opento new connections.." />
+                                </LinearLayout>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="60dp"
+                                    android:layout_height="60dp"
+                                    android:layout_margin="10dp"
+                                    android:layout_marginStart="4dp"
+                                    android:layout_marginTop="4dp"
+                                    android:elevation="10dp"
+                                    app:cardCornerRadius="10dp"
+
+                                    app:layout_constraintEnd_toStartOf="@+id/linearLayout24"
+                                    app:layout_constraintStart_toStartOf="parent"
+                                    app:layout_constraintTop_toTopOf="parent">
+
+                                    <ImageView
+                                        android:id="@+id/imageView24"
+                                        android:layout_width="60dp"
+                                        android:layout_height="60dp"
+                                        android:layout_gravity="center"
+                                        android:contentDescription="Description for Accessibility"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/person3" />
+                                </androidx.cardview.widget.CardView>
+
+                            </androidx.constraintlayout.widget.ConstraintLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </RelativeLayout>
 
 
                 </RelativeLayout>

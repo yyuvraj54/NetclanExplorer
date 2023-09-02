@@ -1,7 +1,9 @@
 package com.example.netclanexplorerclone
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.widget.ImageButton
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -33,6 +35,13 @@ class MainActivity : AppCompatActivity() {
 
         val drawerLayout = binding.drawerLayout
         val navView = binding.navView
+        val refineBtn= findViewById<ImageButton>(R.id.refine)
+
+        refineBtn.setOnClickListener {
+            val intent = Intent(this,Refine::class.java);
+            startActivity(intent);
+
+        }
 
         val navController = findNavController(R.id.nav_host_fragment_content_main)
 
